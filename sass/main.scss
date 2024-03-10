@@ -12,19 +12,13 @@
   --dark-blue: hsl(218, 23%, 16%);
 }
 
-
 // Responsive Breakpoints
-$bp-largest: 75em; // 1200px
-$bp-large:62.5em; // 1000px
-$bp-medium: 50em; // 800px
 $bp-small: 37.5em; // 600px
-
 
 html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
-
 
 body {
   background-color: var(--dark-blue);
@@ -32,7 +26,6 @@ body {
   position: relative;
   height: 100vh;
 }
-
 
 .advice {
   max-width: 50rem;
@@ -102,11 +95,19 @@ body {
   margin-top: auto;
   width: 100%;
   height: 3rem;
-  background-color: orangered;
+  background-color: var(--dark-grayish-blue);
   position: absolute;
   top: calc(100vh - 3rem);
-}
-
-.hidden {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  & p {
+    color: var(--light-cyan);
+    & a {
+      color: var(--neon-green);
+      text-decoration: none;
+      font-weight: 800;
+    }
+  }
 }
